@@ -12,21 +12,21 @@ namespace TutorialWebApi.Controllers
     [ApiController]
     public class HelloWorldController : ControllerBase
     {
-        // GET: api/<HelloWorldController>
+        // GET: api/HelloWorld
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "Hello", "World!" };
         }
 
-        // GET api/<HelloWorldController>/5
+        // GET api/HelloWorld/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value:" + id.ToString();
         }
 
-        // POST api/<HelloWorldController>
+        // POST api/HelloWorld
         [HttpPost]
         public void Post([FromBody] string value)
         {
@@ -35,7 +35,7 @@ namespace TutorialWebApi.Controllers
             // Create Resource, e.g. in our database.
         }
 
-        // PUT api/<HelloWorldController>/5
+        // PUT api/HelloWorld/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
@@ -44,7 +44,7 @@ namespace TutorialWebApi.Controllers
             // Update/Replace the Resource, e.g. in our database.
         }
 
-        // DELETE api/<HelloWorldController>/5
+        // DELETE api/HelloWorld/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
